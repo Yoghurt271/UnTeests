@@ -6,16 +6,22 @@ namespace UnTeests.Tests
     public class UnTeests : Raschet
     {
         [TestMethod]
-        public void Computte()
+        public void Perim_5and5_20()
         {
-            Raschet raschet = new Raschet();
             first = 5;
             second = 5;
-            double result = 20;
-            double actual = 20;
-            Compute();
-            Assert.AreEqual(result, actual);
+            double expented = 20;
+            Perim();
+            Assert.AreEqual(result, expented);
 
+        }
+        [TestMethod]
+        public void Diamm()
+        {
+            first = 6.28;
+            double expented = 1;
+            Diam();
+            Assert.AreEqual(result, expented);
         }
     }
 }

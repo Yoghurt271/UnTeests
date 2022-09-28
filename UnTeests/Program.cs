@@ -7,7 +7,8 @@ namespace UnTeests
         static void Main(string[] args)
         {
             Raschet raschet = new Raschet();
-            raschet.Compute();
+            raschet.Perim();
+            raschet.Diam();
         }
     }
 }

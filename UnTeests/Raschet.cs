@@ -8,57 +8,28 @@ namespace UnTeests
     {
             public double first;
             public double second;
-            public string Variant;
-            public string radius;
+            public double result;
             public double pi = 3.14;
-        public void Compute()
+        public void Perim()
         { 
-            Console.WriteLine("Для расчета периметра прямоугольника нажмите <1>...");
-            Console.WriteLine("Для расчета радиуса круга нажмите <2>...");
-            Variant = Console.ReadLine();
-            switch (Variant)
-            {
-                case "1":
-                    Console.WriteLine("Введите длину");
-                    first = Double.Parse(Console.ReadLine());
-                    Console.WriteLine("Введите ширину");
-                    second = Double.Parse(Console.ReadLine());
-                    Console.WriteLine("Периметр равен:" + (first + second) * 2);
+            Console.WriteLine("Для расчет периметра прямоугольника");
+            Console.WriteLine("Введите длину");
+            first = Double.Parse(Console.ReadLine());
+            Console.WriteLine("Введите ширину");
+            second = Double.Parse(Console.ReadLine());
+            result = (first + second) * 2;
+            Console.WriteLine("Периметр равен:" + result);
 
-                    break;
-
-                case "2":
-                    Console.WriteLine("Если известен диаметр окружности нажмите <1>...");
-                    Console.WriteLine("Если известна длина окружности нажмите <2>...");
-                    radius = Console.ReadLine();
-
-                    switch (radius)
-                    {
-                        case "1":
-                            Console.WriteLine("Введите диаметр");
-                            first = Double.Parse(Console.ReadLine());
-                            Console.WriteLine("Радиус равен: " + first / 2);
-                            break;
-
-                        case "2":
-                            Console.WriteLine("Введите длину");
-                            first = Double.Parse(Console.ReadLine());
-                            Console.WriteLine("Радиус равен: " + first / (2 * pi));
-                            break;
-
-                        default:
-                            Console.WriteLine("Выбран неизвестный вариант");
-                            break;
-                    }
-
-                    break;
-
-                default:
-                    Console.WriteLine("Неизвестный вариант");
-                    break;
-            }
-            Console.WriteLine("Нажмите Enter для выхода...");
-            Console.ReadLine();
         }
+        public void Diam()
+        {
+            Console.WriteLine("\nДля расчета радиуса круга по длине окружности");
+            Console.WriteLine("Введите длину");
+            first = Double.Parse(Console.ReadLine());
+            result = first / (2 * pi);
+            Console.WriteLine("Радиус равен: " + result);
+            Console.ReadKey();
+        }
+
     }
 }
